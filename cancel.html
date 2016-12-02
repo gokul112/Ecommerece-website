@@ -1,0 +1,44 @@
+<html>
+<head>
+<script>
+function validate()
+{
+ var a;
+ if((a=document.myform.NAME.value)=="")
+ {
+  alert("Please enter your name");
+  document.myform.NAME.focus();
+  return false;
+ }
+ 
+}
+</script>
+</head>
+<body bgcolor="silver">
+<fieldset>
+<center>
+<br><h1>
+<center>CANCEL DETAILS</center>
+<br>
+<hr>
+<form name="myform" action="canceld.php" onsubmit="return(validate());" method="post">
+<center>
+<pre>
+<img src="master.jpg" width="200" height="200"></img>  <img src="credit.jpg" height="200" width="200">   <img src="visa.jpg" height="200" width="200">     <img src="maestro.jpg" width="200" height="200"></img></pre>
+<table>
+<tr>
+<th>NAME:</th>
+<td><input type="text" name="NAME"></td></tr>
+<tr>
+<th>PRODUCT MODEL:</th>
+<td><input type="text" name="model"></td>
+</tr>
+</table> 
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</center>
+<br>
+</fieldset>
+</form>
+</body>
+</html>

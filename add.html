@@ -1,0 +1,80 @@
+<html>
+<head>
+<script>
+function validate()
+{
+ var a;
+ if((a=document.myform.NAME.value)=="")
+ {
+  alert("Please enter your name");
+  document.myform.NAME.focus();
+  return false;
+ }
+ var b;
+ b=document.myform.pincode.value;
+ if(b=="")
+ {
+  alert("Please enter the pincode"); 
+  document.myform.pincode.focus();
+  return false;
+ }
+ if(isNaN(b))
+ {
+  alert("Enter the pincode in a numneric form");
+  document.myform.pincode.focus();
+  return false; 
+ }
+ if((b.length)!=6)
+ {
+  alert("Enter the 6 digit pincode");
+  document.myform.pincode.focus();
+  return false;
+ }
+}
+</script>
+</head>
+<body bgcolor="silver">
+<fieldset>
+<center>
+<br><h1>
+<center>CART DETAILS</center>
+<br>
+<hr>
+<form name="myform" action="cart.php" onsubmit="return(validate());" method="post">
+<center>
+<table>
+<tr>
+<th>NAME:</th>
+<td><input type="text"  name="NAME"></td></tr>
+<tr>
+<th>product type</th>
+<td><select name="product">
+<option value="select">---select---</option>
+<option value="HOME APPLICANES">home applicanes</option> 
+<option value="electronics">ELECTRONICS</option>
+<option value="lcd and tv">lcd and tv</option>
+<option value="BED">BED</option>
+<option value="kitchen tools">KITCHEN TOOLS</option>
+<option value="MOBILE">MOBILE</option>
+<option value="watch">WATCH</option>
+<option value="t-shirt">T-SHIRT</option>
+<option value="furniture">furniture</option>
+<option value="fans">FANS</option>
+</select></td>
+</tr>
+<tr>
+<th>PRODUCT MODEL:</th>
+<td><input type="text" name="model"></td>
+</tr>
+<th>PINCODE:</th>
+<td><input type="text" name="pincode"></td>
+</tr>
+</table> 
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</center>
+<br>
+</fieldset>
+</form>
+</body>
+</html>

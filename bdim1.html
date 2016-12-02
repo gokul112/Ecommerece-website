@@ -1,0 +1,44 @@
+<html>
+<script>
+function bd1()
+ {
+   if(confirm('are you buy this product'));
+     
+
+         <?php
+            $c=mysqli_connect("localhost","root","","project");
+             $m="bd";
+             $k="bd10";
+             $p=20050;
+              mysqli_query("insert into purchase values('bed','bd10',20050)",$c);
+              mysqli_close();
+           ?>
+   
+ }
+function big(x)    
+ {
+x.style.height="300px";
+x.style.width="300px";
+}
+ function small(x)
+ {
+ x.style.height="200px";
+ x.style.width="200px";
+ }
+</script>
+<body bgcolor="silver">
+<img src="bd1.jpg" height="200" width="200" Onclick="bd1()"></img>
+<center>
+<table>
+
+<tr><td><b>name=<i>bed</i></b></td></tr>
+<font size="8" color="blue">
+<tr><td><b>model</b>= <strong>bd10</strong>;</td></tr></font>
+<tr><td><b>price</b>=<i>Rs20050</i></td></tr></font>
+<tr><td><b>description</b>=<i>it is made up of teak<br>
+slim</i></td></tr>
+<tr><td><a href="add.html"><input type="button" value="add to cart"></a><a href="form.html"><input type="button" value="buy now"></a></td></tr>
+</center>
+</table>
+</html>
+
