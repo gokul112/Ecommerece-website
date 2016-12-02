@@ -1,0 +1,9 @@
+<html>
+<?php
+$c=mysqli_connect("localhost","LOKESH","itmit","test");
+if(!$c)
+echo "could not connect";
+mysqli_query("INSERT INTO user VALUES("$_POST['name'],$_POST['dob'],$_POST['ac'],$_POST['pass'],$_POST['mobile'],$_POST['email],$_POST['address'])",$c);
+mysqli_close($c);
+?>
+</html>
