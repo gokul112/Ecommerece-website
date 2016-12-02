@@ -1,0 +1,155 @@
+<html>
+<head>
+<script>
+function hi()
+ {
+  var x=document.test.name.value;
+  var y=document.test.email.value;
+  var z=document.test.acn.value;
+  var k=document.test.mobile.value;
+  var m=document.test.date.value;
+  var atpos=y.indexOf("@");
+
+  var dotpos=y.lastIndexOf(".");
+  if(x=="")
+
+  {
+
+  alert("Please Enter Your Name");
+   return false;
+
+  document.test.name.focus();
+
+  }
+   else if(!isNaN(x))
+
+  {
+
+  alert("Enter the valid Name");
+
+  document.test.name.focus();
+
+  return false;
+
+  }
+   else if(z=="")
+   {
+    alert('enter the account number');
+    document.test.acn.focus();
+     return false;
+    }
+ else if(m=="")
+
+  {
+
+  alert("Please Enter Your date of birth");
+
+  document.test.date.focus();
+
+  return false;
+
+  }
+  
+  else if(k=="")
+
+  {
+
+  alert("please Enter the Contact Number");
+
+   document.test.mobile.focus();
+
+  return false;
+
+  }
+  else if(isNaN(k))
+
+  {
+
+  alert("Enter the valid Mobile Number(Like : 9566137117)");
+
+  document.test.mobile.focus();
+
+  return false;
+
+  }
+ else if (atpos<1 || dotpos<atpos+2 || dotpos+2>=y.length)
+
+  {
+
+  alert("Not a valid e-mail address");
+
+  document.test.email.focus();
+   return false;
+
+  
+       }
+  else if(!document.test.term.checked)
+    {
+     alert("please accept term and conditions");
+     document.test.term.focus();
+     return false;
+    }
+   else
+     return true;
+
+  }
+
+</script>
+</html>
+<div class="bt">
+<center><b>The World of Fruit</b></center>
+</div>
+
+<body bgcolor="#FF9933">
+<style>
+.bt
+{background-color:#FF6600;
+}
+</style>
+<center>Fruit Survey</center>
+<br>
+<center>
+<br>
+<hr>
+<form name="test"  onsubmit="return(hi());" method="post">
+<br>
+<center> <table>
+<tr><td>Name&nbsp;</td><td><input type="text" name="name" size="27"></td></tr>
+<td>Address</td>  <td><input type="text" name="address" value="10 th avenue"></td></tr>
+<tr><td>Email</td><td><input type="text" size="27" name="email"></td></tr>
+
+<td>My favourite Fruit</td><td><select>
+<option>-select-</option>
+ <option>Apple</option>
+ <option>bannana</option>
+ <option>plum</option>
+ <option>pomegrenate</option>
+ <option>Pineapple</option>
+  </select></td></tr>
+<tr><td>how many pieces of fruit do you eat per day</td><td><label>
+  <input name="radiobutton" type="radio" value="radiobutton">
+  1
+</label>
+    <p>
+      <input name="radiobutton" type="radio" value="radiobutton">
+      0</p>
+    <p>
+      <input name="radiobutton" type="radio" value="radiobutton"> 
+      2</p>
+    <p>
+      <input name="radiobutton" type="radio" value="radiobutton">
+      2 or more 
+    </p>
+    <p>&nbsp;</p></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>Would you like a Brochure<input type="checkbox" name="term"></td><td></td></tr>
+<tr><td><input type="submit" value="submit"></td><td><input type="reset" value="reset"></td></tr>
+
+</table>
+<br><br><br>
+</form>
+</body>
+</html>

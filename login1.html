@@ -1,0 +1,50 @@
+<html>
+<head>
+<script>
+function validate()
+ {
+   var a=document.myform.name.value;
+    var b=document.myform.pass.value;
+     if(a=="")
+     {
+       alert('enter the name');
+       
+     }
+     else if(!isNaN(a))
+       {
+         alert('enter the correct name');
+          return false;
+          }
+      else if(b=="")
+         {
+          alert('enter the password');
+           return false;
+         }
+   }
+</script>
+<body bgcolor="silver">
+<fieldset>
+<center><h2>LOGIN</h2>
+<hr>
+<form name="myform" action="login.php" onsubmit="return(validate());">
+<table>
+<tr><td>Name</td><td><input type="text" name="name" size="27"></td></tr>
+<tr><td>Password</td><td><input type="password" name="pass" size="27"></td></tr>
+<br><br>
+<br><br>
+</font>
+</form>
+<tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="submit"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" value="reset"></td></tr>
+</table>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="login.html">Don't have an account</a>
+<br><br>
+<br><br>
+<br><br>
+<br><br><br><br>
+</center>
+</fieldset>
+</body>
+</html>
